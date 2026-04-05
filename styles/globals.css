@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f3f7fb;
+  color: #183246;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #0f5f8d 0%, #0d7bb3 100%);
+  color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 18px 40px rgba(13, 123, 179, 0.16);
+}
+
+.header-row,
+.footer-row,
+.hero,
+.section-header,
+.station-card-top,
+.details-hero,
+.page-actions,
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-title {
+  margin: 4px 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.main-content {
+  padding: 32px 0 48px;
+  flex: 1;
+}
+
+.site-footer {
+  border-top: 1px solid #dbe6ef;
+  background: #ffffff;
+  padding: 18px 0;
+  color: #4b6476;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0d7bb3;
+}
+
+.hero,
+.details-hero,
+.content-card,
+.metric-card,
+.station-card,
+.info-card,
+.chart-card,
+.reference-card {
+  background: #ffffff;
+  border: 1px solid #d9e7f1;
+  border-radius: 24px;
+  box-shadow: 0 22px 48px rgba(18, 50, 70, 0.06);
+}
+
+.hero,
+.details-hero,
+.content-card,
+.info-card,
+.chart-card {
+  padding: 28px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.lead {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #456174;
+}
+
+.hero-note,
+.details-aqi {
+  min-width: 180px;
+  text-align: center;
+  padding: 18px;
+  border-radius: 20px;
+  background: #eaf6fc;
+  color: #0d7bb3;
+}
+
+.hero-note strong,
+.details-aqi strong {
+  display: block;
+  font-size: 2rem;
+  margin-top: 6px;
+}
+
+.metrics-grid,
+.station-cards,
+.reference-grid,
+.charts-layout,
+.details-grid,
+.pollutants-grid,
+.compact-grid,
+.station-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 28px;
+}
+
+.metric-card {
+  padding: 22px;
+}
+
+.metric-title,
+.metric-hint,
+.station-city,
+.station-description,
+.reference-card p,
+.chart-header p,
+.safe-range,
+.pollutant-item span,
+.compact-grid dt,
+.station-grid dt {
+  color: #567182;
+}
+
+.metric-title,
+.station-city,
+.compact-grid dt,
+.station-grid dt {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.metric-value {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.section-header {
+  margin: 0 0 18px;
+}
+
+.section-header h2,
+.hero h2,
+.details-hero h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 2.7vw, 2.3rem);
+}
+
+.station-cards,
+.reference-grid,
+.charts-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.station-card,
+.reference-card {
+  padding: 22px;
+}
+
+.station-card h3,
+.reference-card h3,
+.info-card h3,
+.chart-card h3 {
+  margin: 0 0 10px;
+}
+
+.station-description {
+  line-height: 1.6;
+  min-height: 74px;
+}
+
+.station-grid,
+.compact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 18px 0 22px;
+}
+
+.station-grid dd,
+.compact-grid dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.primary-link,
+.ghost-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.primary-link {
+  background: #0d7bb3;
+  color: #ffffff;
+}
+
+.ghost-link {
+  background: #ecf5fb;
+  color: #0d7bb3;
+}
+
+.status-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.good {
+  background: #e4f7eb;
+  color: #167c3f;
+}
+
+.moderate {
+  background: #fff7dd;
+  color: #8d6400;
+}
+
+.warning {
+  background: #fff0df;
+  color: #b05c00;
+}
+
+.danger {
+  background: #ffe3e3;
+  color: #b23434;
+}
+
+.details-grid,
+.charts-layout {
+  margin-top: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pollutants-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.pollutant-item {
+  border: 1px solid #d9e7f1;
+  border-radius: 18px;
+  padding: 14px;
+  background: #f8fbfd;
+}
+
+.pollutant-item strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.04rem;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+  overflow: visible;
+}
+
+.chart-grid {
+  stroke: #d7e4ee;
+  stroke-width: 1;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #0d7bb3;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.chart-dot {
+  fill: #0d7bb3;
+}
+
+.chart-label {
+  fill: #6a8596;
+  font-size: 11px;
+}
+
+.chart-range {
+  display: flex;
+  justify-content: space-between;
+  color: #5d7788;
+  font-size: 0.92rem;
+  margin-top: 10px;
+}
+
+.chart-unit,
+.safe-range {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #edf6fb;
+  color: #0d7bb3;
+  font-weight: 700;
+}
+
+.prose p {
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+.page-actions {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 960px) {
+  .metrics-grid,
+  .station-cards,
+  .reference-grid,
+  .details-grid,
+  .charts-layout,
+  .pollutants-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-row,
+  .footer-row,
+  .hero,
+  .section-header,
+  .details-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .metrics-grid,
+  .station-cards,
+  .reference-grid,
+  .details-grid,
+  .charts-layout,
+  .pollutants-grid,
+  .station-grid,
+  .compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: min(100% - 24px, 1160px);
+  }
+}
